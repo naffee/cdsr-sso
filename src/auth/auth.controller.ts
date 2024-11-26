@@ -147,5 +147,5 @@ export class AuthController {
     @Body() createRoleDto: CreateRoleDto,
     ): Promise<CommonResponse> {
         return this.authService.createAdminRole(createRoleDto);
-    }
+    }                                                                                                                    
 }
