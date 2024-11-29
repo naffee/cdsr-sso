@@ -147,5 +147,13 @@ export class AuthController {
     @Body() createRoleDto: CreateRoleDto,
     ): Promise<CommonResponse> {
         return this.authService.createAdminRole(createRoleDto);
-    }                                                                                                                    
+    }
+    
+    @ApiTags('Register')
+    @Post('register-user')
+    async registerUser(
+    @Body() signUpDto: SignUpDto,
+    ): Promise<CommonResponse> {
+        return this.authService.registerUser(signUpDto);
+    }                                                          
 }
